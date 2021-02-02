@@ -1,0 +1,40 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix od: <http://opendiscovery.org/rdf/Model#> .
+@prefix tc: <http://opendiscovery.org/rdf/Concept/> .
+@prefix odp: <http://opendiscovery.org/rdf/Person/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+
+<http://opendiscovery.org/rdf/BIB/Book/9781539892182>
+    dc:language "ru"^^dcterms:RFC4646 ;
+    dc:publisher "Independently published"@en ;
+    dcterms:creator odp:Shpakovsky_NA ;
+    dcterms:issued "2010"^^dcterms:W3CDTF ;
+    dcterms:title "ТРИЗ. Анализ технической и патентной информации и генерация новых идей"@ru ;
+    dcterms:abstract """multiline abstract"""
+    bibo:isbn "???" ;
+    a od:TRIZ-Book .
+
+<http://opendiscovery.org/rdf/BIB/Book/9781539892182>
+    dc:language "en"^^dcterms:RFC4646 ;
+    dc:publisher "Independently published"@en ;
+    dcterms:creator odp:Shpakovsky_NA ;
+    dcterms:issued "2016"^^dcterms:W3CDTF ;
+    dcterms:title "Tree of Technology Evolution"@en ;
+    dcterms:abstract """multiline abstract"""
+    bibo:isbn "9781539892182" ;
+    a od:TRIZ-Book .
+
+<http://opendiscovery.org/rdf/EvolutionTrees/>
+    cc:attributionName "The Open Discovery Project" ;
+    cc:attributionURL <http://opendiscovery.org> ;
+    cc:license <http://www.apache.org/licenses/LICENSE-2.0> ;
+    a owl:Ontology ;
+    rdfs:comment "Terms from Trees of Technology Evolution";
+    rdfs:label "TRIZ Ontology Project - Evolution Trees" .
+
