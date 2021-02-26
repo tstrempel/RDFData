@@ -11,16 +11,6 @@
 @prefix cc: <http://creativecommons.org/ns#> .
 
 <http://opendiscovery.org/rdf/BIB/Book/9781539892182>
-    dc:language "ru"^^dcterms:RFC4646 ;
-    dc:publisher "Independently published"@en ;
-    dcterms:creator odp:Shpakovsky_NA ;
-    dcterms:issued "2010"^^dcterms:W3CDTF ;
-    dcterms:title "ТРИЗ. Анализ технической и патентной информации и генерация новых идей"@ru ;
-    dcterms:abstract """multiline abstract"""
-    bibo:isbn "???" ;
-    a od:TRIZ-Book .
-
-<http://opendiscovery.org/rdf/BIB/Book/9781539892182>
     dc:language "en"^^dcterms:RFC4646 ;
     dc:publisher "Independently published"@en ;
     dcterms:creator odp:Shpakovsky_NA ;
@@ -38,3 +28,10 @@
     rdfs:comment "Terms from Trees of Technology Evolution";
     rdfs:label "TRIZ Ontology Project - Evolution Trees" .
 
+tc:EvolutionPatterns
+    a skos:Concept;
+    skos:prefLabel ""@de, ""@en
+
+tc:EvolutionTrees
+    a skos:Concept;
+    skos:prefLabel ""@de, ""@en
