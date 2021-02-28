@@ -29,9 +29,79 @@
     rdfs:label "TRIZ Ontology Project - Evolution Trees" .
 
 tc:EvolutionPatterns
-    a skos:Concept;
-    skos:prefLabel ""@de, ""@en
+    a skos:Concept ;
+    skos:prefLabel "Evolutionsmuster"@de, "Evolution patterns"@en .
 
 tc:EvolutionTrees
-    a skos:Concept;
-    skos:prefLabel ""@de, ""@en
+    a skos:Concept ;
+    skos:prefLabel "Evolutionsbaum"@de, "Evolution trees"@en .
+
+tc:Ideality
+    a skos:Concept ;
+    skos:prefLabel "Idealität eines technischen Systems"@de, "Ideality of a technical system"@en .
+
+tc:ProblemTypesInModernEngineering
+    a skos:Concept ;
+    skos:prefLabel "Problem types in modern engineering"@en, "Problemtypen im modernen Ingenieurwesen"@de .
+
+tc:InformationFields
+
+# Assoziation Regeln <-> Konzepte die Regeln abdecken
+# Trimming als Sonderfall
+tc:RequirementsStructuredInformationField
+    a skos:Concept ;
+    skos:prefLabel "Requirements of a structured information field"@en "Anforderungen an ein strukturiertes Informationsfeld"@de .
+
+tc:ObjectiveEcolutionPatterms
+
+tc:BasicEvoltutionPatterns
+
+# rules
+tc:ConstructionOfNewEvolutionPatterns 
+
+tc:BasicEvolutionTrees
+
+tc:ConstructionOfEvolutionTrees
+
+# andere TRIZ definitionen?
+tc:Functions
+
+tc:ElementalFunctions
+
+tc:MainFunctions
+
+tc:AuxilliaryFunctions
+
+tc:MorphologicalBoxes  # MorphologicalTables, Problems
+
+tc:SpecificEvolutionTrees
+
+tc:EvolutionTreeTrunk
+
+tc:SpecificEvolutionPatterns
+
+# double take?
+tc:ConstructionOfNewEvolutionTrees
+
+# Beispiele wie händeln?
+tc:EvolutionTreeScreen
+
+# Unterbeispiele wie händeln
+tc:UsageOfEvolutionTrees
+
+tc:SearchOverInformationField
+
+tc:InventionProblems
+
+tc:structuralAnalogy
+
+tc:PatentCircumvention
+
+# ... of technical systems
+tc:QuantitativePrediction
+
+tc:QualitativePrediction
+
+# maslows pyramid
+
+# Gesetze <-> Empfehlungen
