@@ -40,13 +40,15 @@ tc:EvolutionTrees
 tc:Ideality
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Ideality of a technical system"@en, "Idealität eines technischen Systems"@de ;
-    skos:definition "ratio of a complex parameter characterizing the performance of the given system’s function to the system’s operation cost"@en, "Verhältnis zwischen der verrichteten Arbeit der Funktion und deren Ausführungskosten" .
+    skos:definition "ratio of a complex parameter characterizing the performance of the given system’s function to the system’s operation cost"@en, "Verhältnis zwischen der verrichteten Arbeit der Funktion und deren Ausführungskosten" ;
+    skos:.
 
 tc:ProblemTypesInModernEngineering
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Problem types in modern engineering"@en, "Problemtypen im modernen Ingenieurwesen"@de .
 
-tc:InformationFields
+
+tc:InformationField
 
 # Assoziation Regeln <-> Konzepte die Regeln abdecken
 # Trimming als Sonderfall
@@ -69,9 +71,21 @@ tc:BasicEvolutionTree
 tc:ConstructionOfEvolutionTrees
 
 # andere TRIZ definitionen?
-tc:Functions
+# S. 107
+tc:Function
 
-tc:ElementalFunctions
+tc:Tool
+   a skos:Concept
+
+tc:WorkObject
+
+# Tool -Interaction-> WorkObject
+tc:FunctionModel
+
+tc:ElementaryFunction
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Elementary function"@en, "Elementarfunktion"@de ;
+    skos:definition "Function that can't be further divided into qualitatively differenct actions"@en, "Funktion welche nicht in unterschiedliche neue Funktionen zerlegt werden können"@de .
 
 tc:MainFunctions
 
@@ -104,7 +118,7 @@ tc:SearchOverInformationField
 
 tc:InventionProblems
 
-tc:structuralAnalogy
+tc:StructuralAnalogy
 
 tc:PatentCircumvention
 
@@ -124,3 +138,6 @@ tc:QualitativePrediction
 # references to princliples
 
 # Typ/namespace für empfehlungen
+
+# existiert bei Soukov oder im VDI
+# tc:Field tc:FunctionIdealModeling FunctionModel IdealFinalResult
