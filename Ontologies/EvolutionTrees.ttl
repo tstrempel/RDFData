@@ -29,20 +29,21 @@
     rdfs:label "TRIZ Ontology Project - Evolution Trees" .
 
 tc:EvolutionPatterns
-    a skos:Concept od:AdditionalConcept ;
+    a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolutionsmuster"@de, "Evolution patterns"@en ;
     skos:definition "" .
 
 tc:EvolutionTrees
-    a skos:Concept od:AdditionalConcept ;
+    a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolutionsbaum"@de, "Evolution trees"@en .
 
 tc:Ideality
-    a skos:Concept od:AdditionalConcept ;
-    skos:prefLabel "Idealität eines technischen Systems"@de, "Ideality of a technical system"@en .
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Ideality of a technical system"@en, "Idealität eines technischen Systems"@de ;
+    skos:definition "ratio of a complex parameter characterizing the performance of the given system’s function to the system’s operation cost"@en, "Verhältnis zwischen der verrichteten Arbeit der Funktion und deren Ausführungskosten" .
 
 tc:ProblemTypesInModernEngineering
-    a skos:Concept od:AdditionalConcept ;
+    a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Problem types in modern engineering"@en, "Problemtypen im modernen Ingenieurwesen"@de .
 
 tc:InformationFields
@@ -50,7 +51,7 @@ tc:InformationFields
 # Assoziation Regeln <-> Konzepte die Regeln abdecken
 # Trimming als Sonderfall
 tc:RequirementsStructuredInformationField
-    a skos:Concept od:AdditionalConcept ;
+    a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Requirements of a structured information field"@en, "Anforderungen an ein strukturiertes Informationsfeld"@de .
 
 tc:ObjectiveEcolutionPatterms
@@ -61,7 +62,7 @@ tc:BasicEvoltutionPatterns
 tc:ConstructionOfNewEvolutionPatterns 
 
 tc:BasicEvolutionTree
-    a skos:Concept od:AdditionalConcept ;
+    a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Basic Evolution Tree"@en, "Grundlegender Evolutionsbaum"@de ;
     skos:definition "A Basic Evolution Tree is an organized set of evolution patterns of generalized, abstract features of technical objects"@en, "In einen Baum organisierte Menge von Evolutionsmustern von generalisierten Eigenschaften technischer Objekte"@de .
 
@@ -79,12 +80,12 @@ tc:AuxilliaryFunctions
 tc:MorphologicalBoxes  # MorphologicalTables, Problems
 
 tc:SpecificEvolutionTree
-    a skos:Concept od:AdditionalConcept ;
+    a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Specific Evolution Tree"@en, "Spezifischer Evolutionsbaum"@de ;
     skos:definition "A Specific Evolution Tree is an organized set of transformation versions of an object under examination."@en, "Organisierte Menge von Transformationsversionen eines untersuchten Objektes"@de .
 
 tc:EvolutionTreeTrunk
-    a skos:Concept od:AdditionalConcept ;
+    a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Tree trunk of the evolution tree"@en, "Baumstamm des Evolutionsbaums"@de ;
     skos:definition "Main axis of development"@en,"Hauptachse der Entwicklung"@de .
 
@@ -121,3 +122,5 @@ tc:QualitativePrediction
 # def Object <-> TS
 
 # references to princliples
+
+# Typ/namespace für empfehlungen
