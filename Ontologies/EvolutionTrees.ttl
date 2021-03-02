@@ -40,8 +40,9 @@ tc:EvolutionTrees
 tc:Ideality
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Ideality of a technical system"@en, "Idealität eines technischen Systems"@de ;
-    skos:definition "ratio of a complex parameter characterizing the performance of the given system’s function to the system’s operation cost"@en, "Verhältnis zwischen der verrichteten Arbeit der Funktion und deren Ausführungskosten" ;
-    skos:.
+    skos:definition "ratio of a complex parameter characterizing the performance of the given system’s function to the system’s operation cost"@en, "Verhältnis zwischen der verrichteten Arbeit der Funktion und deren Ausführungskosten" .
+
+tc:Ideality skos:related tc:FunctionIdealModeling .
 
 tc:ProblemTypesInModernEngineering
     a skos:Concept, od:AdditionalConcept ;
@@ -58,7 +59,27 @@ tc:RequirementsStructuredInformationField
 
 tc:ObjectiveEcolutionPatterms
 
-tc:BasicEvoltutionPatterns
+tc:BasicEvolutionPatterns
+
+tc:MonoBiPoly
+
+tc:Trimming
+
+tc:ExpandingTrimming
+
+tc:Segmentation
+
+tc:GeometricalEvolution
+
+tc:ObjectStructureEvolution
+
+tc:SurfacePropertyEvolution
+
+tc:Dynamization
+
+tc:IncreasingControllability
+
+tc:IncreasingCoordination
 
 # rules
 tc:ConstructionOfNewEvolutionPatterns 
@@ -141,3 +162,4 @@ tc:QualitativePrediction
 
 # existiert bei Soukov oder im VDI
 # tc:Field tc:FunctionIdealModeling FunctionModel IdealFinalResult
+
