@@ -10,13 +10,16 @@
 @prefix odp: <http://opendiscovery.org/rdf/Person/> .
 @prefix cc: <http://creativecommons.org/ns#> .
 
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix bibo: <http://purl.org/ontology/bibo/> .
+
 <http://opendiscovery.org/rdf/BIB/Book/9781539892182>
     dc:language "en"^^dcterms:RFC4646 ;
     dc:publisher "Independently published"@en ;
     dcterms:creator odp:Shpakovsky_NA ;
     dcterms:issued "2016"^^dcterms:W3CDTF ;
     dcterms:title "Tree of Technology Evolution"@en ;
-    dcterms:abstract """multiline abstract"""
+    dcterms:abstract """multiline abstract""" ;
     bibo:isbn "9781539892182" ;
     a od:TRIZ-Book .
 
@@ -67,7 +70,7 @@ tc:RequirementsStructuredInformationField
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Requirements of a structured information field"@en, "Anforderungen an ein strukturiertes Informationsfeld"@de .
 
-tc:ObjectiveEcolutionPatterms
+# tc:ObjectiveEcolutionPatterms
 
 tc:BasicEvolutionPatterns
     od:hasSubConcept tc:MonoBiPoly, tc:Trimming, tc:ExpandingTrimming, tc:Segmentation, tc:SurfacePropertyEvolution, tc:InternalStructureEvolution, tc:GeometricalEvolution, tc:Dynamization, tc:IncreasingControllability, tc:IncreasingActionCoordination ;
@@ -102,7 +105,7 @@ tc:Segmentation
 tc:SurfacePropertyEvolution
     od:subConceptOf tc:BasicEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Evolution of surface properties"@en, "Evolution von Oberflächeneigenschaften"@de 
+    skos:prefLabel "Evolution of surface properties"@en, "Evolution von Oberflächeneigenschaften"@de ;
     skos:example ""@en, ""@de .
 
 tc:InternalStructureEvolution
@@ -130,42 +133,41 @@ tc:IncreasingActionCoordination
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing of action coordination"@en, "Erhöhung der Koordination der Aktionen"@de .
 
-tc:Recommendation
+# tc:Recommendation
 
-tc:EvolutionPatternConstructionRecommendations
+# tc:EvolutionPatternConstructionRecommendations
 
 # rules, recommentations
-tc:ConstructionOfNewEvolutionPatterns 
+# tc:ConstructionOfNewEvolutionPatterns 
 
 tc:BasicEvolutionTrees
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Basic Evolution Trees"@en, "Grundlegender Evolutionsbäume"@de ;
     skos:definition "A Basic Evolution Tree is an organized set of evolution patterns of generalized, abstract features of technical objects"@en, "In einen Baum organisierte Menge von Evolutionsmustern von generalisierten Eigenschaften technischer Objekte"@de .
 
-tc:EvolutionTreeCOnstructionRecommendations
+# tc:EvolutionTreeCOnstructionRecommendations
 
 # andere TRIZ definitionen?
 # S. 107
-tc:Function
+#tc:Function
 
-tc:Tool
-   a skos:Concept
+#tc:Tool
 
-tc:WorkObject
+# tc:WorkObject
 
 # Tool -Interaction-> WorkObject
-tc:FunctionModel
+# tc:FunctionModel
 
 tc:ElementaryFunction
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Elementary function"@en, "Elementarfunktion"@de ;
     skos:definition "Function that can't be further divided into qualitatively differenct actions"@en, "Funktion welche nicht in unterschiedliche neue Funktionen zerlegt werden können"@de .
 
-tc:MainFunctions
+# tc:MainFunctions
 
-tc:AuxilliaryFunctions
+# tc:AuxilliaryFunctions
 
-tc:MorphologicalBoxes  # MorphologicalTables, Problems
+# tc:MorphologicalBoxes  # MorphologicalTables, Problems
 
 tc:SpecificEvolutionTrees
     a skos:Concept, od:AdditionalConcept ;
@@ -177,32 +179,32 @@ tc:EvolutionTreeTrunk
     skos:prefLabel "Tree trunk of the evolution tree"@en, "Baumstamm des Evolutionsbaums"@de ;
     skos:definition "Main axis of development"@en,"Hauptachse der Entwicklung"@de .
 
-tc:SpecificEvolutionPatterns
+# tc:SpecificEvolutionPatterns
 
 # double take?
-tc:ConstructionOfNewEvolutionTrees
+# tc:ConstructionOfNewEvolutionTrees
 
 # Beispiele wie händeln?
-tc:EvolutionTreeScreen
+# tc:EvolutionTreeScreen
 
 # Unterbeispiele wie händeln
-tc:UsageOfEvolutionTrees
+# tc:UsageOfEvolutionTrees
 
-tc:InformationFieldSearch
+# tc:InformationFieldSearch
 # frontal
 
-tc:InventionProblems
+# tc:InventionProblems
 
-tc:PreliminaryConceptSpectrum
+# tc:PreliminaryConceptSpectrum
 
-tc:StructuralAnalogyMethod
+# tc:StructuralAnalogyMethod
 
-tc:PatentCircumvention
+# tc:PatentCircumvention
 
 # ... of technical systems
-tc:QuantitativePrediction
+# tc:QuantitativePrediction
 
-tc:QualitativePrediction
+# tc:QualitativePrediction
 
 # maslows pyramid
 
