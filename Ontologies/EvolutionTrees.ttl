@@ -42,11 +42,20 @@ tc:Ideality
     skos:prefLabel "Ideality of a technical system"@en, "Idealität eines technischen Systems"@de ;
     skos:definition "ratio of a complex parameter characterizing the performance of the given system’s function to the system’s operation cost"@en, "Verhältnis zwischen der verrichteten Arbeit der Funktion und deren Ausführungskosten" .
 
+# auch im souchkov glossary
 tc:Ideality skos:related tc:FunctionIdealModeling .
 
 tc:ProblemTypesInModernEngineering
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Problem types in modern engineering"@en, "Problemtypen im modernen Ingenieurwesen"@de .
+    skos:prefLabel "Problem types in modern engineering"@en, "Problemtypen im modernen Ingenieurwesen"@de ;
+    skos:definition """Problem types in modern engineering:
+    1. Solving urgent technical problems
+    2. Forecasting technical system evolution
+    3. Searching for alternative solutions for patent circumvention and protection"""@en, 
+    """Problemtypen im modernen Ingenieurwesen umfassen:
+    1. Lösung dringender technischer Probleme
+    2. Voerhersage der Evolution technischer Systeme
+    3. Patentumgehung und Schutz von eigenen Patenten durch einen Patentschirm"""@de .
 
 tc:InformationField
     a skos:Concept, od:AdditionalConcept ;
@@ -68,27 +77,33 @@ tc:BasicEvolutionPatterns
 tc:MonoBiPoly
     od:subConceptOf tc:BasicEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "The Mono-bi-poly transition"@en, "Mono-bi-poly Transition"@de .
+    skos:prefLabel "The Mono-bi-poly transition"@en, "Mono-bi-poly Transition"@de ;
+    skos:example "Spanner - Two Spanners - Multiple Spanners - One adjustable Spanner, street lamps"@en, "Ein Schraubenschlüssel - Zwei Schraubenschlüssel - Viele Schraubenschlüssel - Ein einstellbarer Schraubenschlüssel, Straßenlaternen"@de .
 
+# how to relate to VDI-Glossary
 tc:Trimming
     od:subConceptOf tc:BasicEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de .
+    skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
+    skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de .
 
 tc:ExpandingTrimming
     od:subConceptOf tc:BasicEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Expanding - Trimming a System"@en, "Expandieren und Trimmen eines Systems"@de .
+    skos:prefLabel "Expanding - Trimming a System"@en, "Expandieren und Trimmen eines Systems"@de ;
+    skos:example "car body"@en, "Auto"@de .
 
 tc:Segmentation
     od:subConceptOf tc:BasicEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de .
+    skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
+    skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de .
 
 tc:SurfacePropertyEvolution
     od:subConceptOf tc:BasicEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Evolution of surface properties"@en, "Evolution von Oberflächeneigenschaften"@de .
+    skos:prefLabel "Evolution of surface properties"@en, "Evolution von Oberflächeneigenschaften"@de 
+    skos:example ""@en, ""@de .
 
 tc:InternalStructureEvolution
     od:subConceptOf tc:BasicEvolutionPatterns ;
