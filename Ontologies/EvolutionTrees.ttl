@@ -32,13 +32,13 @@
     rdfs:label "WUMM TRIZ Ontology - Evolution Trees" ;
     owl:imports <http://opendiscovery.org/rdf/Ontologies/GeneralConcepts/> .
 
-tc:EvolutionPatterns
-    od:hasSubConcept tc:BasicEvolutionPatterns tc:SpecificEvolutionPatterns ;
+tc:EvolutionPattern
+    od:hasSubConcept tc:BasicEvolutionPattern tc:SpecificEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolutionsmuster"@de, "Evolution patterns"@en ;
     skos:definition "" .
 
-tc:EvolutionTrees
+tc:EvolutionTree
     od:subConceptOf tc:StructuredInformationField ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolutionsbaum"@de, "Evolution trees"@en .
@@ -71,7 +71,7 @@ tc:InformationField
 
 tc:StructuredInformationField
     od:subConceptOf tc:InformationField ;
-    od:hasSubConcept tc:EvolutionTrees ;
+    od:hasSubConcept tc:EvolutionTree ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Structured information field"@en, "Strukturiertes Informationsfeld"@de ;
     skos:definition """Requirements for a structured information field:
@@ -90,20 +90,17 @@ Versionen)
 
 # Assoziation Regeln <-> Konzepte die Regeln abdecken
 # Trimming als Sonderfall
-tc:RequirementsStructuredInformationField
-    a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Requirements of a structured information field"@en, "Anforderungen an ein strukturiertes Informationsfeld"@de .
 
-tc:BasicEvolutionPatterns
-    od:subConceptOf tc:EvolutionPatterns ;
-    od:hasSubConcept tc:MonoBiPoly, tc:Trimming, tc:ExpandingTrimming, tc:Segmentation, tc:SurfacePropertyEvolution, tc:InternalStructureEvolution, tc:GeometricalEvolution, tc:Dynamization, tc:IncreasingControllability, tc:IncreasingActionCoordination ;
+tc:BasicEvolutionPattern
+    od:subConceptOf tc:EvolutionPattern ;
+    od:hasSubConcept tc:MonoBiPolyPattern, tc:TrimmingPattern, tc:ExpandingTrimmingPattern, tc:SegmentationPattern, tc:SurfacePropertyEvolutionPattern, tc:InternalStructureEvolutionPattern, tc:GeometricalEvolutionPattern, tc:DynamizationPattern, tc:IncreasingControllabilityPattern, tc:IncreasingActionCoordinationPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "The main evolution patterns of technical objects"@en, "Die Basisevolutionsmuster technischer Objekte"@de .
 
 # examples in skos:example or ex: ?
 
 tc:MonoBiPolyPattern
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "The Mono-bi-poly transition"@en, "Mono-bi-poly Transition"@de ;
     skos:example "Spanner - Two Spanners - Multiple Spanners - One adjustable Spanner, street lamps"@en, "Ein Schraubenschlüssel - Zwei Schraubenschlüssel - Viele Schraubenschlüssel - Ein einstellbarer Schraubenschlüssel, Straßenlaternen"@de .
@@ -111,43 +108,43 @@ tc:MonoBiPolyPattern
 
 # how to relate to VDI-Glossary
 # Souchkov tc:T_rimming
-tc:Trimming
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:TrimmingPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
     skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de .
 # Initial system, Removing a single Object, Removing several objects, Maximally trimmed system, Ideal object
 
-tc:ExpandingTrimming
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:ExpandingTrimmingPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Expanding - Trimming a System"@en, "Expandieren und Trimmen eines Systems"@de ;
     skos:example "car body"@en, "Auto"@de .
 # Functional nucleus, Introducing an additional object, Introducing several additional objects, Complete system, Removing a single object, Removing several objects, Maximally trimmed system, Ideal object
 
-tc:Segmentation
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:SegmentationPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de .
 # Monolith, Two pars, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
 
-tc:SurfacePropertyEvolution
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:SurfacePropertyEvolutionPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolution of surface properties"@en, "Evolution von Oberflächeneigenschaften"@de ;
     skos:example "Roughing up the surface of the steering wheel"@en, "Aufrauen der Oberfläche eines Lenkrads"@de .
 # Smooth surface, Protrusions and hollows, Finely profiled surface, Surface having special properties
 
-tc:InternalStructureEvolution
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:InternalStructureEvolutionPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Internal structure evolution"@en, "Evolution von inneren Strukturen"@de ;
     skos:example "Car bumper"@en, "Stoßstange des Autos"@de .
 # Solid structure, Introduction of voidness, Several volumes, Multiple volumes, Introduction of fields and forces
 
-tc:GeometricalEvolution
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:GeometricalEvolutionPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Geometrical Evolution"@en, "Geometrische Evolution"@de ;
     skos:example "Evolution of the computer mouse shape"@en, "Evolution der Computermausform"@de .
@@ -156,23 +153,23 @@ tc:GeometricalEvolution
 # Straight line, Line curved in one direction, Line curved in two directions, Complicated line
 # Point
 
-tc:Dynamization
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:DynamizationPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Dynamization"@en, "Dynamisierung"@de ;
     skos:example "Dynamization of the toothbrush head/handle mount"@en, "Dynamisierung der Zahnbürstenkopf-/Griffhalterung"@de .
 # Tight coupling, One hinge, Several hinges, Spherical hinges
 # Flexible couplings, Parts coupled by field, Uncoupled parts
 
-tc:IncreasingControllability
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:IncreasingControllabilityPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing controllability"@en, "Erhöhung der Kontrollierbarkeit"@de ;
     skos:example "trailer train wheels"@en, "Anhängerzugräder"@de .
 # Manual control, Semi-automatic control, Automatic control
 
-tc:IncreasingActionCoordination
-    od:subConceptOf tc:BasicEvolutionPatterns ;
+tc:IncreasingActionCoordinationPattern
+    od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing of action coordination"@en, "Erhöhung der Koordination der Aktionen"@de ;
     skos:example "gear-boxes"@en, "Getriebe"@de .
@@ -232,7 +229,7 @@ tc:EvolutionTreeTrunk
     skos:definition "Main axis of development"@en, "Hauptachse der Entwicklung"@de .
 
 tc:SpecificEvolutionPatterns
-    od:subConceptOf tc:EvolutionPatterns ;
+    od:subConceptOf tc:EvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Specific evolution Patterns for an observed object"@en, ""@de .
 
