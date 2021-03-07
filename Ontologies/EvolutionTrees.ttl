@@ -41,7 +41,7 @@ tc:EvolutionTree
 
 tc:EvolutionPattern
     od:subConceptOf tc:EvolutionTree ;
-    od:hasSubConcept tc:BasicEvolutionPattern tc:SpecificEvolutionPatterns ;
+    od:hasSubConcept tc:BasicEvolutionPattern, tc:SpecificEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolutionsmuster"@de, "Evolution patterns"@en ;
     skos:definition "" .
@@ -110,11 +110,11 @@ od:transitionsTo
 # od:Recommendation
 tc:MonoBiPolyPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
-    od:hasSubConcept tc:MonoSystem ;
+    od:hasSubConcept tc:MonoSystem, tc:BiSystem, tc:PolySystem, tc:NewMonoSystem ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "The Mono-bi-poly transition"@en, "Mono-bi-poly Transition"@de ;
     skos:example "Spanner"@en, "Schraubenschlüssel"@de ;
-    skos:broader odq:Copying tc:TransitiontoMacroLevel .
+    skos:broader odq:Copying, tc:TransitiontoMacroLevel .
 
 tc:MonoSystem
     od:subConceptOf tc:MonoBiPolyPattern ;
@@ -128,9 +128,9 @@ tc:BiSystem
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Bi-system"@en, "Bisystem"@de ;
     skos:example "Two Spanners"@en, "Zwei Schraubenschlüssel"@de ;
-    od:transitionsTo tc:Polysystem .
+    od:transitionsTo tc:PolySystem .
 
-tc:Polysystem
+tc:PolySystem
     od:subConceptOf tc:MonoBiPolyPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Poly-system"@en, "Polysystem"@de ;
@@ -144,7 +144,6 @@ tc:NewMonoSystem
     skos:example "One adjustable Spanner"@en, "Ein einstellbarer Schraubenschlüssel"@de .
 
 # how to relate to VDI-Glossary
-# Souchkov tc:T_rimming
 tc:TrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
@@ -165,7 +164,7 @@ tc:SegmentationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
-    skos:broader odq:Segmentation .
+    skos:broader odq:Segmentation, tc:TrendofTransitiontoMicrolevel .
 # Monolith, Two pars, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
 
 tc:SurfacePropertyEvolutionPattern
@@ -186,7 +185,7 @@ tc:GeometricalEvolutionPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Geometrical Evolution"@en, "Geometrische Evolution"@de ;
-    skos:example "Evolution of the computer mouse shape"@en, "Evolution der Computermausform"@de 
+    skos:example "Evolution of the computer mouse shape"@en, "Evolution der Computermausform"@de ;
     skos:broader odq:BallSimilarity .
 # Prism, Cylinder, Sphere, Compilcated 3D structure
 # Flat surface, Cylindrical surface, Spherical surface, Combined surface
@@ -197,7 +196,7 @@ tc:DynamizationPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Dynamization"@en, "Dynamisierung"@de ;
-    skos:example "Dynamization of the toothbrush head/handle mount"@en, "Dynamisierung der Zahnbürstenkopf-/Griffhalterung"@de 
+    skos:example "Dynamization of the toothbrush head/handle mount"@en, "Dynamisierung der Zahnbürstenkopf-/Griffhalterung"@de ;
     skos:broader odq:Dynamization .
 # Tight coupling, One hinge, Several hinges, Spherical hinges
 # Flexible couplings, Parts coupled by field, Uncoupled parts
@@ -206,7 +205,7 @@ tc:IncreasingControllabilityPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing controllability"@en, "Erhöhung der Kontrollierbarkeit"@de ;
-    skos:example "trailer train wheels"@en, "Anhängerzugräder"@de 
+    skos:example "trailer train wheels"@en, "Anhängerzugräder"@de ;
     skos:broader odq:Mediator .
 # Manual control, Semi-automatic control, Automatic control
 
@@ -215,12 +214,12 @@ tc:IncreasingActionCoordinationPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing of action coordination"@en, "Erhöhung der Koordination der Aktionen"@de ;
     skos:example "gear-boxes"@en, "Getriebe"@de ;
-    skos:broader odq:Coupling odq:Feedback .
+    skos:broader odq:Coupling, odq:Feedback .
 # Uncoordinated actions, Partially coordinated actions, Coordinated actions, Actions performed during intervals
 
 tc:Recommendation
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Recommendations for "
+    skos:prefLabel ""@en, ""@de ;
     skos:narrower tc:LawsTechnicalSystemEvolution .
 
 # tc:EvolutionPatternConstructionRecommendations
@@ -249,7 +248,7 @@ tc:BasicEvolutionTrees
 tc:ElementaryFunction
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Elementary function"@en, "Elementarfunktion"@de ;
-    skos:definition "Function that can't be further divided into qualitatively differenct actions"@en, "Funktion welche nicht in unterschiedliche neue Funktionen zerlegt werden können"@de 
+    skos:definition "Function that can't be further divided into qualitatively differenct actions"@en, "Funktion welche nicht in unterschiedliche neue Funktionen zerlegt werden können"@de ;
     skos:broader tc:Function .
 
 # tc:MainFunction
@@ -286,7 +285,7 @@ tc:SpecificEvolutionPatterns
 # tc:UsageOfEvolutionTrees
 
 tc:InformationFieldSearch
-    od:hasSubConcept tc:FrontalSearch tc:StructuralSearch ;
+    od:hasSubConcept tc:FrontalSearch, tc:StructuralSearch ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Searching an information field"@en, "Durchsuchen eines Informationsfeldes"@de .
 
@@ -300,7 +299,7 @@ tc:StructuralSearch
     od:subConceptOf tc:InformationFieldSearch ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Structural search of an information field"@en, "Struturelles Durchsuchen eines Informationsfelder"@de ;
-    skos:definition "Determine in advance where the required information is concentrated using the versions of the basic evolution tree"@en, "Im Voraus ermitteln wo die benötigte Information konzentriert ist"@de 
+    skos:definition "Determine in advance where the required information is concentrated using the versions of the basic evolution tree"@en, "Im Voraus ermitteln wo die benötigte Information konzentriert ist"@de ;
     skos:broader tc:BasicEvolutionTrees .
 
 
@@ -311,7 +310,7 @@ tc:StructuralSearch
 tc:Analogy
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Analogy"@en, "Analogie"@de ;
-    skos:definition "Analogy is correspondence between objects and processes affording ground for the transfer of information, characterizing one object, to another object having similar essential properties."@en, "Analogie ist eine Entsprechung zwischen Objekten und Prozessen, die die Übertragung von Informationen, die ein Objekt charakterisieren, auf ein anderes Objekt mit ähnlichen wesentlichen Eigenschaften ermöglicht."@de
+    skos:definition "Analogy is correspondence between objects and processes affording ground for the transfer of information, characterizing one object, to another object having similar essential properties."@en, "Analogie ist eine Entsprechung zwischen Objekten und Prozessen, die die Übertragung von Informationen, die ein Objekt charakterisieren, auf ein anderes Objekt mit ähnlichen wesentlichen Eigenschaften ermöglicht."@de .
 
 tc:StructuralAnalogyMethod
     a skos:Concept, od:AdditionalConcept ;
