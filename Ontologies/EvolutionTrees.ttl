@@ -33,6 +33,8 @@
     rdfs:label "WUMM TRIZ Ontology - Evolution Trees" ;
     owl:imports <http://opendiscovery.org/rdf/Ontologies/GeneralConcepts/> .
 
+# Base concepts
+
 tc:EvolutionTree
     od:subConceptOf tc:StructuredInformationField ;
     od:hasSubConcept tc:EvolutionPattern ;
@@ -43,8 +45,7 @@ tc:EvolutionPattern
     od:subConceptOf tc:EvolutionTree ;
     od:hasSubConcept tc:BasicEvolutionPattern, tc:SpecificEvolutionPatterns ;
     a skos:Concept, od:AdditionalConcept ;
-    skos:prefLabel "Evolutionsmuster"@de, "Evolution patterns"@en ;
-    skos:definition "" .
+    skos:prefLabel "Evolutionsmuster"@de, "Evolution patterns"@en .
 
 tc:Ideality
     a skos:Concept, od:AdditionalConcept ;
@@ -91,9 +92,7 @@ Versionen)
     4. Visualisierbarkeit (Lücken erkennen zur Patentumgehung)
     5. Ausreichende Beschreibung bzw. Voraussage noch nicht existierender Versionen"""@de .
 
-# Assoziation Regeln <-> Konzepte die Regeln abdecken
-# Trimming als Sonderfall
-
+# Evolution Patterns
 tc:BasicEvolutionPattern
     od:subConceptOf tc:EvolutionPattern ;
     od:hasSubConcept tc:MonoBiPolyPattern, tc:TrimmingPattern, tc:ExpandingTrimmingPattern, tc:SegmentationPattern, tc:SurfacePropertyEvolutionPattern, tc:InternalStructureEvolutionPattern, tc:GeometricalEvolutionPattern, tc:DynamizationPattern, tc:IncreasingControllabilityPattern, tc:IncreasingActionCoordinationPattern ;
@@ -145,7 +144,7 @@ tc:NewMonoSystem
 
 tc:TrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
-    od:hasSubConcept tc:InitialSystem ;
+    od:hasSubConcept tc:InitialSystem, tc:RemovingSingleObject ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
     skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de ;
@@ -156,6 +155,11 @@ tc:InitialSystem
     od:subConceptOf tc:TrimmingPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Initial system"@en, "Initiales System"@de .
+
+tc:RemovingSingleObject
+    od:subConceptOf tc:TrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Removing a single object"@en, "Entfernen eines einzelnen Objektes"@de .
 
 tc:ExpandingTrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
@@ -279,6 +283,8 @@ tc:SpecificEvolutionPatterns
 
 # tc:ConstructionOfNewEvolutionTrees
 
+# Using Evolution Trees for practical purposes
+
 tc:InformationFieldSearch
     od:hasSubConcept tc:FrontalSearch, tc:StructuralSearch ;
     a skos:Concept, od:AdditionalConcept ;
@@ -336,3 +342,5 @@ tc:QuantitativePrediction
 # maslows pyramid
 # Gesetze <-> Empfehlungen
 # transformation versioning
+# Assoziation Regeln <-> Konzepte die Regeln abdecken
+# Trimming als Sonderfall
