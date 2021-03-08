@@ -104,9 +104,7 @@ od:transitionsTo
     rdfs:domain tc:EvolutionTree ;
     rdfs:range tc:EvolutionPattern .
 
-# examples in skos:example or ex: ?
-# enums?
-# od:Recommendation
+# MonoBiPoly
 tc:MonoBiPolyPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     od:hasSubConcept tc:MonoSystem, tc:BiSystem, tc:PolySystem, tc:NewMonoSystem ;
@@ -142,14 +140,14 @@ tc:NewMonoSystem
     skos:prefLabel "new mono-system"@en, "neues Monosystem"@de ;
     skos:example "One adjustable Spanner"@en, "Ein einstellbarer Schraubenschlüssel"@de .
 
+# Trimming
 tc:TrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
-    od:hasSubConcept tc:InitialSystem, tc:RemovingSingleObject ;
+    od:hasSubConcept tc:InitialSystem, tc:RemovingSingleObject, tc:RemovingSeveralObjects, tc:MaximallyTrimmedSystem, tc:IdealObject ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
     skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de ;
     skos:broader odq:Separation, tc:Trimming .
-# Initial system, Removing a single Object, Removing several objects, Maximally trimmed system, Ideal object
 
 tc:InitialSystem
     od:subConceptOf tc:TrimmingPattern ;
@@ -161,35 +159,180 @@ tc:RemovingSingleObject
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Removing a single object"@en, "Entfernen eines einzelnen Objektes"@de .
 
+tc:RemovingSeveralObjects
+    od:subConceptOf tc:TrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Removing several object"@en, "Entfernen mehrerer Objekte"@de .
+
+tc:MaximallyTrimmedSystem
+    od:subConceptOf tc:TrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Maximally trimmed system"@en, "Maximal getrimmtes System"@de .
+
+tc:IdealObject
+    od:subConceptOf tc:TrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Ideal object"@en, "Ideales Object"@de .
+
+# ExpandingTrimming
 tc:ExpandingTrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:FunctionalNucleus, tc:IntroducingAdditionalObject, tc:IntroducingSeveralAdditionalObjects, tc:CompleteSystem ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Expanding - Trimming a System"@en, "Expandieren und Trimmen eines Systems"@de ;
-    skos:example "car body"@en, "Auto"@de .
-# Functional nucleus, Introducing an additional object, Introducing several additional objects, Complete system, Removing a single object, Removing several objects, Maximally trimmed system, Ideal object
+    skos:example "car body"@en, "Auto"@de ;
+    skos:narrower tc:Trimming .
+# in Trimming: Removing a single object, Removing several objects, Maximally trimmed system, Ideal object
+
+tc:FunctionalNucleus
+    od:subConceptOf tc:ExpandingTrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Functional nucleus"@en, "Funktionsnukleus"@de .
+
+tc:IntroducingAdditionalObject
+    od:subConceptOf tc:ExpandingTrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Introducing of an additional object"@en, "Einführung eines zusätzlichen Objektes"@de .
+
+tc:IntroducingSeveralAdditionalObjects
+    od:subConceptOf tc:ExpandingTrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Intruducing of several additional objects"@en, "Einführung mehrerer zusätzlicher Objekte"@de .
+
+tc:CompleteSystem
+    od:subConceptOf tc:ExpandingTrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Complete system"@en, "Komplettes System"@de .
 
 tc:SegmentationPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:Monolith, tc:TwoParts, tc:ManyParts, tc:Granules, tc:Powder, tc:Paste, tc:Liquid, tc:Foam, tc:Fog, tc:Plasma, tc:Vacuum ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
     skos:broader odq:Segmentation, tc:TrendofTransitiontoMicrolevel .
-# Monolith, Two pars, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
+# Field?, Ideal object
 
+tc:Monolith
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Monolith"@en, "Monolith"@de .
+
+tc:TwoParts
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Two parts"@en, "Zwei Teile"@de .
+
+tc:ManyParts
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Many parts"@en, "Mehrere Teile"@de .
+
+tc:Granules
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Granules"@en, "Granulat"@de .
+
+tc:Powder
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Powder"@en, "Pulver"@de .
+
+tc:Paste
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Paste"@en, "Paste"@de .
+
+tc:Liquid
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Liquid"@en, "Flüssigkeit"@de .
+
+tc:Foam
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Foam"@en, "Schaum"@de .
+
+tc:Fog
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Fog"@en, "Nebel"@de .
+
+tc:Plasma
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Plasma"@en, "Plasma"@de .
+
+# tc:Field
+
+tc:Vacuum
+    od:subConceptOf tc:SegmentationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Vaccum"@en, "Vakuum"@de .
+
+# Surface property evolution
 tc:SurfacePropertyEvolutionPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:SmoothSurface, tc:ProtrusionsAndHollows, tc:FinelyProfiledSurface, tc:SurfaceHavingSpecialProperties ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolution of surface properties"@en, "Evolution von Oberflächeneigenschaften"@de ;
     skos:example "Roughing up the surface of the steering wheel"@en, "Aufrauen der Oberfläche eines Lenkrads"@de .
-# Smooth surface, Protrusions and hollows, Finely profiled surface, Surface having special properties
 
+tc:SmoothSurface
+    od:subConceptOf tc:SurfacePropertyEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Smooth surface"@en, "Glatte Oberfläche"@de .
+
+tc:ProtrusionsAndHollows
+    od:subConceptOf tc:SurfacePropertyEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Protrusions and hollows"@en, "Vorsprünge und Hohlräume"@de .
+
+tc:FinelyProfiledSurface
+    od:subConceptOf tc:SurfacePropertyEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Finely profiled surface"@en, "Fein profilierte Oberfläche"@de .
+
+tc:SurfaceHavingSpecialProperties
+    od:subConceptOf tc:SurfacePropertyEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Surface having special properties"@en, "Oberfläche mit besonderen Eigenschaften"@de .
+
+# Internal structure evolution
 tc:InternalStructureEvolutionPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:SolidStructure, tc:IntroductionOfVoidness, tc:SeveralVolumes, tc:MultipleVolumes, tc:IntroductionOfFieldsAndForces ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Internal structure evolution"@en, "Evolution von inneren Strukturen"@de ;
     skos:example "Car bumper"@en, "Stoßstange des Autos"@de .
 # Solid structure, Introduction of voidness, Several volumes, Multiple volumes, Introduction of fields and forces
 
+tc:SolidStructure
+    od:subConceptOf tc:InternalStructureEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Solid structure"@en, "Solide Struktur"@de .
+
+tc:IntroductionOfVoidness
+    od:subConceptOf tc:InternalStructureEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Introduction of voidness"@en, "Einführung von Leerheit bzw. Aushöhlungen"@de .
+
+tc:SeveralVolumes
+    od:subConceptOf tc:InternalStructureEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Several volumes"@en, "Einige Aushöhlungen"@de .
+
+tc:MultipleVolumes
+    od:subConceptOf tc:InternalStructureEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Multiple volumes"@en, "Mehrere Aushöhlungen"@de .
+
+tc:IntroductionOfFieldsAndForces
+    od:subConceptOf tc:InternalStructureEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Introduction of fields and forces"@en, "Einführung von Feldern und Kräften"@de .
+
+# Geometrical Evolution Pattern
 tc:GeometricalEvolutionPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
