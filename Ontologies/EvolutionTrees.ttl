@@ -143,14 +143,19 @@ tc:NewMonoSystem
     skos:prefLabel "new mono-system"@en, "neues Monosystem"@de ;
     skos:example "One adjustable Spanner"@en, "Ein einstellbarer Schraubenschlüssel"@de .
 
-# how to relate to VDI-Glossary
 tc:TrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:InitialSystem ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
     skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de ;
     skos:broader odq:Separation, tc:Trimming .
 # Initial system, Removing a single Object, Removing several objects, Maximally trimmed system, Ideal object
+
+tc:InitialSystem
+    od:subConceptOf tc:TrimmingPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Initial system"@en, "Initiales System"@de .
 
 tc:ExpandingTrimmingPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
@@ -232,16 +237,13 @@ tc:BasicEvolutionTrees
     skos:prefLabel "Basic Evolution Trees"@en, "Grundlegender Evolutionsbäume"@de ;
     skos:definition "A Basic Evolution Tree is an organized set of evolution patterns of generalized, abstract features of technical objects"@en, "In einen Baum organisierte Menge von Evolutionsmustern von generalisierten Eigenschaften technischer Objekte"@de .
 
-# tc:EvolutionTreeCOnstructionRecommendations
+# tc:EvolutionTreeConstructionRecommendations
 
-# andere TRIZ definitionen?
+# andere TRIZ definitionen berücksichtigen
 # S. 107
-#tc:Function
-
-#tc:Tool
-
+# tc:Function
+# tc:Tool
 # tc:WorkObject
-
 # Tool -Interaction-> WorkObject
 # tc:FunctionModel
 
@@ -275,14 +277,7 @@ tc:SpecificEvolutionPatterns
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Specific evolution Patterns for an observed object"@en, ""@de .
 
-# double take?
 # tc:ConstructionOfNewEvolutionTrees
-
-# Beispiele wie händeln?
-# tc:EvolutionTreeScreen
-
-# Unterbeispiele wie händeln
-# tc:UsageOfEvolutionTrees
 
 tc:InformationFieldSearch
     od:hasSubConcept tc:FrontalSearch, tc:StructuralSearch ;
@@ -339,17 +334,5 @@ tc:QuantitativePrediction
     skos:prefLabel "Qualitative Prediction"@en, "Qualitative Vorhersage"@de .
 
 # maslows pyramid
-
 # Gesetze <-> Empfehlungen
-
-# Transformation versionen
-
-# def Object <-> TS
-
-# references to princliples
-
-# Typ/namespace für empfehlungen
-
-# existiert bei Soukov oder im VDI
-# tc:Field tc:FunctionIdealModeling FunctionModel IdealFinalResult
-
+# transformation versioning
