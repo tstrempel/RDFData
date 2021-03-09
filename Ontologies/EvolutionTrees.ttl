@@ -335,6 +335,7 @@ tc:IntroductionOfFieldsAndForces
 # Geometrical Evolution Pattern
 tc:GeometricalEvolutionPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:Prism, tc:Cylinder, tc:Sphere, tc:Complicated3DStructure, tc:FlatSurface, tc:CylindricalSurface, tc:SphericalSurface, tc:CombinedSurface, tc:StraightLine, tc:LineCurvedOneDirection, tc:LineCurvedTwoDirections, tc:ComplicatedLine, tc:Point ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Geometrical Evolution"@en, "Geometrische Evolution"@de ;
     skos:example "Evolution of the computer mouse shape"@en, "Evolution der Computermausform"@de ;
@@ -344,8 +345,75 @@ tc:GeometricalEvolutionPattern
 # Straight line, Line curved in one direction, Line curved in two directions, Complicated line
 # Point
 
+tc:Prism
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Prism"@en, "Prisma"@de .
+
+tc:Cylinder
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Cylinder"@en, "Zylinder"@de .
+
+tc:Sphere
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Sphere"@en, "Kugel"@de .
+
+tc:Complicated3DStructure
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Complicated 3D Structure"@en, "Komplexe 3D Struktur"@de .
+
+tc:FlatSurface
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Flat surface"@en, "Flache Oberfläche"@de .
+
+tc:CylindricalSurface
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Cylindrical surface"@en, "Zylindrische Oberfläche"@de .
+
+tc:SphericalSurface
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Spherical surface"@en, "Sphärische Oberfläche"@de .
+
+tc:CombinedSurface
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Combined surface"@en, "Kombinierte Oberfläche"@de .
+
+tc:StraightLine
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Straight line"@en, "Gerade Linie"@de .
+
+tc:LineCurvedOneDirection
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Line curved in one direction"@en, "Linie in eine Richtung gebogen"@de .
+
+tc:LineCurvedTwoDirections
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Line curved in two directions"@en, "In zwei Richtungen gekrümmte Linie"@de .
+
+tc:ComplicatedLine
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Complicated line"@en, "KOmplexe Linie"@de .
+
+tc:Point
+    od:subConceptOf tc:GeometricalEvolutionPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Point"@en, "Punkt"@de .
+
+# Dynamization
 tc:DynamizationPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:TightCoupling, tc:OneHinge, tc:SeveralHinges, tc:SphericalHinges, tc:FlexibleCouplings, tc:PartsCoupledByField, tc:UncoupledParts ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Dynamization"@en, "Dynamisierung"@de ;
     skos:example "Dynamization of the toothbrush head/handle mount"@en, "Dynamisierung der Zahnbürstenkopf-/Griffhalterung"@de ;
@@ -353,21 +421,96 @@ tc:DynamizationPattern
 # Tight coupling, One hinge, Several hinges, Spherical hinges
 # Flexible couplings, Parts coupled by field, Uncoupled parts
 
+tc:TightCoupling
+    od:subConceptOf tc:DynamizationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Tight coupling"@en, "Enge Kopplung"@de .
+
+tc:OneHinge
+    od:subConceptOf tc:DynamizationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "One hinge"@en, "Ein Scharnier"@de .
+
+tc:SeveralHinges
+    od:subConceptOf tc:DynamizationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Several hinges"@en, "Mehrere Scharniere"@de .
+
+tc:SphericalHinges
+    od:subConceptOf tc:DynamizationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Spherical hinges"@en, "Sphärische Scharniere"@de .
+
+tc:FlexibleCouplings
+    od:subConceptOf tc:DynamizationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Flexible couplings"@en, "Flexible Kopplungen"@de .
+
+tc:PartsCoupledByField
+    od:subConceptOf tc:DynamizationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "Parts coupled by a field"@en, "Über ein Feld gekoppelte Teile"@de .
+
+tc:UncoupledParts
+    od:subConceptOf tc:DynamizationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel "UngekoppelteTeile"@en, ""@de .
+
+# Increasing Controllability
 tc:IncreasingControllabilityPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:ManualControl, tc:SemiAutomaticControl, tc:AutomaticControl ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing controllability"@en, "Erhöhung der Kontrollierbarkeit"@de ;
     skos:example "trailer train wheels"@en, "Anhängerzugräder"@de ;
     skos:broader odq:Mediator .
 # Manual control, Semi-automatic control, Automatic control
 
+tc:ManualControl
+    od:subConceptOf tc:IncreasingControllabilityPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel ""@en, ""@de .
+
+tc:SemiAutomaticControl
+    od:subConceptOf tc:IncreasingControllabilityPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel ""@en, ""@de .
+
+tc:AutomaticControl
+    od:subConceptOf tc:IncreasingControllabilityPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel ""@en, ""@de .
+
+# Increasing Action Coordination
 tc:IncreasingActionCoordinationPattern
     od:subConceptOf tc:BasicEvolutionPattern ;
+    od:hasSubConcept tc:UncoordinatedActions, tc:PartiallyCoordinatedActions, tc:CoordinatedActions, tc:ActionsPerformedDuringIntervals ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Increasing of action coordination"@en, "Erhöhung der Koordination der Aktionen"@de ;
     skos:example "gear-boxes"@en, "Getriebe"@de ;
     skos:broader odq:Coupling, odq:Feedback .
 # Uncoordinated actions, Partially coordinated actions, Coordinated actions, Actions performed during intervals
+
+tc:UncoordinatedActions
+    od:subConceptOf tc:IncreasingActionCoordinationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel ""@en, ""@de .
+
+tc:PartiallyCoordinatedActions
+    od:subConceptOf tc:IncreasingActionCoordinationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel ""@en, ""@de .
+
+tc:CoordinatedActions
+    od:subConceptOf tc:IncreasingActionCoordinationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel ""@en, ""@de .
+
+tc:ActionsPerformedDuringIntervals
+    od:subConceptOf tc:IncreasingActionCoordinationPattern ;
+    a skos:Concept, od:AdditionalConcept ;
+    skos:prefLabel ""@en, ""@de .
+
 
 tc:Recommendation
     a skos:Concept, od:AdditionalConcept ;
