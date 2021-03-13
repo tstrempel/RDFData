@@ -630,9 +630,9 @@ tc:QuantitativePrediction
     skos:prefLabel "Qualitative Prediction"@en, "Qualitative Vorhersage"@de .
 
 # Evolution Screen of the Tree
-ex:Screen
-    od:subConceptOf tc:SpecificEvolutionTree ;
-    skos:prefLabel "Specific "
+# ex:Screen
+#    od:subConceptOf tc:SpecificEvolutionTree ;
+#    skos:prefLabel "Specific "
 
 # maslows pyramid
 # Gesetze <-> Empfehlungen
