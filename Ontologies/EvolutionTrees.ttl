@@ -43,7 +43,7 @@ tc:EvolutionTree
 
 tc:EvolutionPattern
     od:subConceptOf tc:EvolutionTree ;
-    od:hasSubConcept tc:BasicEvolutionPattern, tc:SpecificEvolutionPatterns ;
+    od:hasSubConcept tc:BasicEvolutionPattern, tc:SpecificEvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolutionsmuster"@de, "Evolution patterns"@en .
 
@@ -148,6 +148,7 @@ tc:TrimmingPattern
     skos:prefLabel "Trimming the system's composition"@en, "Die Systemkomposition trimmen"@de ;
     skos:example "Jablochkoff candle"@en, "Jablotschkowsche Kerze"@de ;
     skos:broader odq:Separation, tc:Trimming .
+# Initial system, Removing a single Object, Removing several objects, Maximally trimmed system, Ideal object
 
 tc:InitialSystem
     od:subConceptOf tc:TrimmingPattern ;
@@ -182,6 +183,7 @@ tc:ExpandingTrimmingPattern
     skos:prefLabel "Expanding - Trimming a System"@en, "Expandieren und Trimmen eines Systems"@de ;
     skos:example "car body"@en, "Auto"@de ;
     skos:narrower tc:Trimming .
+# Functional nucleus, Introducing an additional object, Introducing several additional objects, Complete system, Removing a single object, Removing several objects, Maximally trimmed system, Ideal object
 # in Trimming: Removing a single object, Removing several objects, Maximally trimmed system, Ideal object
 
 tc:FunctionalNucleus
@@ -211,7 +213,8 @@ tc:SegmentationPattern
     skos:prefLabel "Segmenting objects and substances"@en, "Segmentierung von Objekten und Substancen"@de ;
     skos:example "segmentation of an aircraft propulsion unit"@en, "Segmentierung eines Fluszeugantriebs"@de ;
     skos:broader odq:Segmentation, tc:TrendofTransitiontoMicrolevel .
-# Field?, Ideal object
+# Monolith, Two parts, Many parts, Granules, Powder, Paste, Liquid, Foam, Fog, Plasma, Field, Vacuum, Ideal object
+# Field?, Ideal object?
 
 tc:Monolith
     od:subConceptOf tc:SegmentationPattern ;
@@ -277,6 +280,7 @@ tc:SurfacePropertyEvolutionPattern
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Evolution of surface properties"@en, "Evolution von Oberflächeneigenschaften"@de ;
     skos:example "Roughing up the surface of the steering wheel"@en, "Aufrauen der Oberfläche eines Lenkrads"@de .
+# Smooth surface, Protrusions and hollows, Finely profiled surface, Surface having special properties
 
 tc:SmoothSurface
     od:subConceptOf tc:SurfacePropertyEvolutionPattern ;
@@ -552,7 +556,7 @@ tc:MorphologicalBox  # MorphologicalTables, Problems
     skos:prefLabel "Morphological box"@en, "Morphologische Box"@de ;
     skos:altLabel "Morphological table"@en, "Morphologische Tabelle"@de .
 
-tc:SpecificEvolutionTrees
+tc:SpecificEvolutionTree
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Specific Evolution Trees"@en, "Spezifischer Evolutionsbäume"@de ;
     skos:definition "A Specific Evolution Tree is an organized set of transformation versions of an object under examination."@en, "Organisierte Menge von Transformationsversionen eines untersuchten Objektes"@de .
@@ -562,7 +566,7 @@ tc:EvolutionTreeTrunk
     skos:prefLabel "Tree trunk of the evolution tree"@en, "Baumstamm des Evolutionsbaums"@de ;
     skos:definition "Main axis of development"@en, "Hauptachse der Entwicklung"@de .
 
-tc:SpecificEvolutionPatterns
+tc:SpecificEvolutionPattern
     od:subConceptOf tc:EvolutionPattern ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Specific evolution Patterns for an observed object"@en, ""@de .
@@ -624,6 +628,11 @@ tc:QuantitativePrediction
     od:subConceptOf tc:Prediction ;
     a skos:Concept, od:AdditionalConcept ;
     skos:prefLabel "Qualitative Prediction"@en, "Qualitative Vorhersage"@de .
+
+# Evolution Screen of the Tree
+ex:Screen
+    od:subConceptOf tc:SpecificEvolutionTree ;
+    skos:prefLabel "Specific "
 
 # maslows pyramid
 # Gesetze <-> Empfehlungen
